@@ -1,11 +1,13 @@
 const res = require('express/lib/response');
-
+const login = require('./login')
+const loginrouter = require('./routs/loginrouter.js')
 const express= require('express');
 const app = express();
 const PORT = 8080;
 
-app.use(express.json())
 
+app.use(express.json())
+login.log('message');
 app.listen(
     PORT,
     ()=> console.log('its alive on http://localhost:${PORT}')
@@ -26,3 +28,6 @@ app.post('/tshirt/:id', (req, res) => {
         identification:id
     })
 }     )
+
+
+app.use("/login", loginrouter)
