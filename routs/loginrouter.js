@@ -7,4 +7,7 @@ router.get('/',(req, res) =>{
     })
 })
 
+router.post('/',(req,res)=> {
+    res.status(200).send("user created")
+})
 module.exports = router
