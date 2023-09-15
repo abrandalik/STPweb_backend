@@ -10,7 +10,7 @@ app.use(express.json())
 login.log('message');
 app.listen(
     PORT,
-    ()=> console.log('its alive on http://localhost:${PORT}')
+    ()=> console.log("its alive on http://localhost:${PORT}")
 )
 
 app.get('/tshirt', (req, res) => {
